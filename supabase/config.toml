@@ -1,0 +1,31 @@
+project_id = "zztengjlhstgfsduaxoj"
+
+[functions.analyze-intelligence]
+verify_jwt = false
+
+[functions.webhook]
+verify_jwt = false
+
+[functions.check-alerts]
+verify_jwt = false
+
+[functions.score-transaction]
+verify_jwt = false
+
+[functions.generate-demo-transactions]
+verify_jwt = false
+
+[functions.network-intelligence]
+verify_jwt = false
+
+[functions.seed-paylaterr]
+verify_jwt = false
+
+[functions.score-paylaterr]
+verify_jwt = false
+
+[functions.send-webhooks]
+verify_jwt = false
+
+[functions.paylaterr-intelligence]
+verify_jwt = false
