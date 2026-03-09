@@ -5,7 +5,7 @@ import SharedIntelligenceSection from "@/components/landing/SharedIntelligenceSe
 import FeedbackLoopSection from "@/components/landing/FeedbackLoopSection";
 import KnowledgeGraphSection from "@/components/landing/KnowledgeGraphSection";
 import ArchitectureSection from "@/components/landing/ArchitectureSection";
-import FlywheelSection from "@/components/landing/FlywheelSection";
+// import FlywheelSection from "@/components/landing/FlywheelSection";
 import CrossIndustrySection from "@/components/landing/CrossIndustrySection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/layout/Footer";
@@ -20,7 +20,7 @@ const Index = () => {
       <FeedbackLoopSection />
       <KnowledgeGraphSection />
       <ArchitectureSection />
-      <FlywheelSection />
+      {/* <FlywheelSection /> */}
       <CrossIndustrySection />
       <CTASection />
       <Footer />
