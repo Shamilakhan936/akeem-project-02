@@ -13,7 +13,7 @@ const flywheelSteps = [
 
 const FlywheelSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

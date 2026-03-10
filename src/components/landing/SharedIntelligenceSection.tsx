@@ -18,7 +18,7 @@ const layerCapabilities = [
 
 const SharedIntelligenceSection = () => {
   return (
-    <section className="py-32 relative">
+    <section className="py-16 relative">
       <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const SharedIntelligenceSection = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 mb-6">
-            <span className="text-xs text-accent font-medium tracking-wider uppercase">Layer 2 — The Moat</span>
+            <span className="text-xs text-accent font-medium tracking-wider uppercase">Layer 2</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">Shared</span>{" "}

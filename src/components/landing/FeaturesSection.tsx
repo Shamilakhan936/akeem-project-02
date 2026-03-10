@@ -19,7 +19,7 @@ const capabilities = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-32 relative" id="agents">
+    <section className="py-16 relative" id="agents">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
