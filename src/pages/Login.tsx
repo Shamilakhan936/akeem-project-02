@@ -16,9 +16,21 @@ const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const trimmedEmail = email.trim();
+    const { error } = await supabase.auth.signInWithPassword({
+      email: trimmedEmail,
+      password,
+    });
     if (error) {
-      toast.error(error.message);
+      if (error.code === "email_not_confirmed") {
+        toast.error(
+          "Confirm your email first — open the link we sent when you signed up, then try again."
+        );
+      } else if (error.code === "invalid_credentials") {
+        toast.error("Invalid email or password.");
+      } else {
+        toast.error(error.message);
+      }
     } else {
       navigate("/dashboard");
     }

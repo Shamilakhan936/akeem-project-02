@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { User, Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
+import { TEMP_DISABLE_AUTH, TEMP_BYPASS_USER } from "@/config/tempAuthBypass";
 
 interface AuthContextType {
   user: User | null;
@@ -24,6 +25,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (TEMP_DISABLE_AUTH) {
+      setSession(null);
+      setUser(TEMP_BYPASS_USER);
+      setLoading(false);
+      return;
+    }
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setSession(session);
@@ -42,6 +50,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const signOut = async () => {
+    if (TEMP_DISABLE_AUTH) return;
     await supabase.auth.signOut();
   };
 
